@@ -1,0 +1,11 @@
+---
+ - name: Ansible apt module examples
+   become: true 
+   hosts: vm1
+   tasks: 
+    - name: Ansible Update Cache and Upgrade all Packages
+      apt:
+        name: "nginx"
+        state: present
+        update_cache: yes
+
